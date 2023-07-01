@@ -1,5 +1,6 @@
 package top.kjwang.service;
 
+import org.apache.ibatis.annotations.Param;
 import top.kjwang.pojo.Books;
 
 import java.util.List;
@@ -21,4 +22,6 @@ public interface BookService {
 	Books queryBookById(int id);
 	//查询全部Book,返回list集合
 	List<Books> queryAllBook();
+	//	根据书名查询书
+	Books queryBookByName(@Param("bookName" )String bookName);
 }
